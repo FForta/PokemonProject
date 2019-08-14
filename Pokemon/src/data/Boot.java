@@ -35,9 +35,11 @@ public class Boot{
 		
 		Route grid = new Route(map);
 		grid.setTile(3, 4, grid.GetTile(2, 4).getType());
+		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 64, 64, 0);
 		while(!Display.isCloseRequested()) {
 			
 			grid.Draw();
+			e.Draw();
 			
 			Display.update();
 			Display.sync(30);
