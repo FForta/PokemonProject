@@ -11,6 +11,7 @@ public class Trainer {
 	int vision;
 	private Texture texture;
 	private Tile spawnTile;
+	//movement instructions? array of corelated directions and distance
 	
 	public Trainer(Texture texture, Tile startTile, int width, int height, int vision) {
 		this.texture = texture;

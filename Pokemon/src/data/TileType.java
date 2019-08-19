@@ -7,6 +7,13 @@ public enum TileType {
 	String textureName;
 	boolean encounter;
 	double encounterRate;
+	boolean northEnter, southEnter, westEnter, eastEnter;
+	boolean smashable, cuttable, pushable, surfable, climbable, waterfallable;
+	boolean eventTile;
+	boolean teleport;
+	String teleportRoute;
+	int teleportX, teleportY;
+	//fishable boolean?
 	
 	TileType(String textureName, boolean encounter, double encounterRate){
 		this.textureName = textureName;

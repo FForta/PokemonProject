@@ -10,7 +10,7 @@ import org.newdawn.slick.opengl.Texture;
 import static org.lwjgl.opengl.GL11.*;
 
 public class Boot{
-	
+	 
 	public Boot() {
 		
 		BeginSession();
@@ -35,7 +35,7 @@ public class Boot{
 		
 		Route grid = new Route(map);
 		grid.setTile(3, 4, grid.GetTile(2, 4).getType());
-		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 64, 64, 0);
+		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 88, 116, 0);
 		while(!Display.isCloseRequested()) {
 			
 			grid.Draw();
