@@ -75,8 +75,4 @@ public class Artist {
 		return tex;
 	}
 	
-	public static void ChangeMultiplier(int change) {
-		if (multip)
-	}
-	
 }

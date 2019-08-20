@@ -7,6 +7,8 @@ import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.DisplayMode;
 import org.newdawn.slick.opengl.Texture;
 
+import helpers.Clock;
+
 import static org.lwjgl.opengl.GL11.*;
 
 public class Boot{
@@ -35,8 +37,10 @@ public class Boot{
 		
 		Route grid = new Route(map);
 		grid.setTile(3, 4, grid.GetTile(2, 4).getType());
-		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 88, 116, 0);
+		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 88, 116, 0, 2);
 		while(!Display.isCloseRequested()) {
+			Clock.update();
+			e.Update();
 			
 			grid.Draw();
 			e.Draw();

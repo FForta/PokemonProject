@@ -2,6 +2,8 @@ package data;
 
 import static helpers.Artist.*;
 
+import java.util.ArrayList;
+
 enum routeType
 {
 	PLAINS, DESERT, WATER, CAVE, 
@@ -10,6 +12,7 @@ enum routeType
 public class Route {
 
 	public Tile[][] area;
+	private ArrayList<Trainer> trainerList;
 	
 	public Route() {
 		area = new Tile[20][15];

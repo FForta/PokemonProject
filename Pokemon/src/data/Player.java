@@ -1,5 +1,7 @@
 package data;
 
+import static helpers.Artist.DrawQuadTex;
+
 import java.awt.event.*;
 import java.util.concurrent.TimeUnit;
 
@@ -9,6 +11,8 @@ public class Player {
 	Route Tile = new Route();
 	int PosX = 1;
 	int PosY = 1; 
+	
+	DrawQuadTex(QuickLoad(""), x, y, width, height);
 	
 	public void keyPressed(KeyEvent e) throws InterruptedException{
         int KeyCode = e.getKeyCode();
