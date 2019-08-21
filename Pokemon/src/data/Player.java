@@ -1,9 +1,12 @@
 package data;
 
-import static helpers.Artist.DrawQuadTex;
+import static helpers.Artist.*;
+import static helpers.Clock.*;
 
 import java.awt.event.*;
 import java.util.concurrent.TimeUnit;
+
+import org.newdawn.slick.opengl.Texture;
 
 public class Player {
 
@@ -11,9 +14,23 @@ public class Player {
 	Route Tile = new Route();
 	int PosX = 1;
 	int PosY = 1; 
+	private int width, height;
+	private float x, y;
+	private Texture texture;
 	
-	DrawQuadTex(QuickLoad(""), x, y, width, height);
+	public Player(Texture texture, Tile startTile, int width, int height) {
+		this.texture = texture;
+		this.x = startTile.getX();
+		this.y = startTile.getY();
+		this.width = width; 
+		this.height = height;
+	}
 	
+	public void Draw() {
+		DrawQuadTex(texture, x, y, width, height);
+	}
+	
+	/*
 	public void keyPressed(KeyEvent e) throws InterruptedException{
         int KeyCode = e.getKeyCode();
         if(KeyCode == KeyEvent.VK_W){

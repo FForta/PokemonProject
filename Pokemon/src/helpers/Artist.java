@@ -18,7 +18,7 @@ public class Artist {
 	public static void BeginSession() {
 		Display.setTitle("Pokemon");
 		try {
-		Display.setDisplayMode(new DisplayMode(600,400));
+		Display.setDisplayMode(new DisplayMode(1280,960));
 		Display.create();
 		} catch (LWJGLException e) {
 			e.printStackTrace();
