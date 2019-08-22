@@ -53,8 +53,7 @@ public class Route {
 	public void Draw() {
 		for (int i = 0; i < area.length; i++) {
 			for (int j = 0; j < area[i].length; j++) {
-				Tile t = area[i][j];
-				DrawQuadTex(t.getTexture(), t.getX(), t.getY(), t.getWidth(), t.getHeight());
+				area[i][j].Draw();
 			}
 		}
 	}

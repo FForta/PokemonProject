@@ -32,12 +32,7 @@ public class Player {
 		DrawQuadTex(texture, x, y, width, height);
 	}
 	
-	/*Tile myTile = grid.GetTile((int) (x / 64), (int)(y / 64));
-	Tile aboveTile = grid.GetTile((int) (x / 64), (int)(y / 64) - 1);
-	Tile belowTile = grid.GetTile((int) (x / 64), (int)(y / 64) + 1);
-	Tile rightTile = grid.GetTile((int) (x / 64) + 1, (int)(y / 64));
-	Tile leftTile = grid.GetTile((int) (x / 64) - 1, (int)(y / 64));
-	
+
 	public void Movement() {
 		while (lockedMovement == false) {
 			while (Keyboard.next()) {
@@ -47,11 +42,11 @@ public class Player {
 					//}
 					
 					//if (aboveTile.northBlocked != true) {
-						myTile = aboveTile;
+						y-=64;
 					//}
 				}
 			}
 		}
 	}
-*/
+
    }
