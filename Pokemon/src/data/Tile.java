@@ -48,7 +48,9 @@ import static helpers.Artist.*;
 			return x;
 		}
 
-
+		public int getXPlace() {
+			return (int) x / 64;
+		}
 
 		public void setX(float x) {
 			this.x = x;
@@ -60,7 +62,9 @@ import static helpers.Artist.*;
 			return y;
 		}
 
-
+		public int getYPlace() {
+			return (int) y / 64;
+		}
 
 		public void setY(float y) {
 			this.y = y;

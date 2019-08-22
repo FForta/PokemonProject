@@ -37,9 +37,9 @@ public class Boot{
 		
 		Route grid = new Route(map);
 		grid.setTile(3, 4, grid.GetTile(2, 4).getType());
-		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), 88, 116, 0, 2);
+		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), grid, 88, 116, 0, 2);
 		LevelEditor editor = new LevelEditor(grid);
-		Player p = new Player(QuickLoad("Player1"), grid.GetTile(2, 2), 72, 108);
+		Player p = new Player(QuickLoad("Player1"), grid.GetTile(5, 5), grid, 72, 108);
 		while(!Display.isCloseRequested()) {
 			Clock.update();
 			e.Update();
