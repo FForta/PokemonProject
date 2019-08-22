@@ -32,27 +32,29 @@ public class Trainer {
 		this.vision = vision;
 		this.speed = speed;
 		
-		this.checkpoints = new ArrayList<Checkpoints>();
-		this.directions = new int[2];
+		//this.checkpoints = new ArrayList<Checkpoints>();
+		//this.directions = new int[3];
 		//X direction
-		this.directions[0] = 0;
+		//this.directions[0] = 0;
 		//Y direction
-		this.directions[1] = 0;
-		directions = FindNextD(startTile);
+		//this.directions[1] = 0;
+		//Distance
+		//this.directions[2] = 0;
+		//directions = FindNextD(startTile);
 	}
 	
 	public void Update() {
 		if (first)
 			first = false;
 		else
-			x += Delta() * directions[0];
-			y += Delta() * directions[1];
+			x += Delta() * speed;//directions[0];
+			y += Delta() * speed;//directions[1];
 		}
 	
 	private int[] FindNextD(Tile s) {
-		int[] dir = new int[2];
+		int[] dir = new int[3];
 				
-		Tile u = grid.GetTile(s.getXPlace(), s.getYPlace() - 1);
+		/*Tile u = grid.GetTile(s.getXPlace(), s.getYPlace() - 1);
 		Tile r = grid.GetTile(s.getXPlace() + 1, s.getYPlace());
 		Tile d = grid.GetTile(s.getXPlace(), s.getYPlace() + 1);
 		Tile l = grid.GetTile(s.getXPlace() - 1, s.getYPlace());
@@ -73,7 +75,7 @@ public class Trainer {
 			dir[0] = -1;
 			dir[1] = 0;
 		}
-		
+		*/
 		return dir;
 	}
 	

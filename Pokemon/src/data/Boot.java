@@ -40,6 +40,7 @@ public class Boot{
 		Trainer e = new Trainer(QuickLoad("Trainer1"), grid.GetTile(10, 10), grid, 88, 116, 0, 2);
 		LevelEditor editor = new LevelEditor(grid);
 		Player p = new Player(QuickLoad("Player1"), grid.GetTile(5, 5), grid, 72, 108);
+		
 		while(!Display.isCloseRequested()) {
 			Clock.update();
 			e.Update();
